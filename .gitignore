@@ -1,0 +1,8 @@
+# Local / OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Earlier single-page drafts (kept locally, not part of the live site)
+_drafts/
