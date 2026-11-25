@@ -1,0 +1,175 @@
+/* Kansatech — base styles */
+html { scroll-behavior: smooth; }
+body { background: #0B0F14; }
+.frame-border { transition: opacity .6s; }
+.reveal-text { will-change: transform; }
+
+/* Hero background slider */
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.hero-slide.is-active { opacity: 1; }
+
+.hero-slide--architecture { background-image: url('../images/hero/architecture.jpg'); }
+.hero-slide--solar { background-image: url('../images/hero/solar.jpg'); }
+.hero-slide--engineering { background-image: url('../images/hero/engineering.jpg'); }
+.hero-slide--electrical { background-image: url('../images/hero/electrical.jpg'); }
+
+@media (max-width: 767px) {
+  .hero-slide--architecture { background-image: url('../images/hero/architecture-mobile.jpg'); }
+  .hero-slide--solar { background-image: url('../images/hero/solar-mobile.jpg'); }
+  .hero-slide--engineering { background-image: url('../images/hero/engineering-mobile.jpg'); }
+  .hero-slide--electrical { background-image: url('../images/hero/electrical-mobile.jpg'); }
+}
+.hero-dot {
+  width: 28px; height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background .4s ease, width .4s ease;
+}
+.hero-dot:hover { background: rgba(255, 255, 255, 0.5); }
+.hero-dot.is-active { background: #D63031; width: 44px; }
+
+/* Hero high-contrast brand red labels */
+.hero-red-label {
+  color: #D63031;
+  font-weight: 600;
+  text-shadow: 0 2px 12px rgba(10, 13, 18, 0.95);
+}
+
+/* Service cards — compact bottom-half overlay & reliable CTA sizing */
+.service-card {
+  min-height: 340px;
+  padding: 1.25rem;
+}
+.service-card-body {
+  position: relative;
+}
+.service-card-eyebrow {
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #D63031;
+  margin-bottom: 0.25rem;
+}
+.service-card-title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+.service-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0.625rem;
+}
+.service-card-cta {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  color: #0A0D12;
+  background-color: #D63031;
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+.service-card-cta:hover {
+  background-color: #E84545;
+}
+
+/* Footer red links */
+.footer-red-link {
+  color: #D63031;
+  transition: color 0.2s ease;
+}
+.footer-red-link:hover {
+  color: #E84545;
+}
+
+/* Mobile navigation toggle & drawer */
+#mobile-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(10, 13, 18, 0.7);
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+#mobile-menu-btn:hover {
+  border-color: #D63031;
+  color: #D63031;
+}
+#mobile-menu {
+  position: fixed;
+  top: 4.5rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 49;
+  background: rgba(10, 13, 18, 0.96);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+#mobile-menu.is-open {
+  display: flex;
+}
+.mobile-menu-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.mobile-menu-link:hover {
+  background-color: rgba(214, 48, 49, 0.12);
+  color: #D63031;
+}
+.mobile-menu-wa {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #0A0D12;
+  background-color: #D63031;
+  transition: background-color 0.2s ease;
+}
+.mobile-menu-wa:hover {
+  background-color: #E84545;
+}
+@media (min-width: 768px) {
+  #mobile-menu-btn,
+  #mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

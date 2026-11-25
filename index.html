@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kansatech — Powering Your Environment | Harare, Zimbabwe &amp; Midrand, South Africa</title>
+  <meta name="description" content="Kansatech (Pvt) Ltd — electrical, mechanical, HVAC, commercial refrigeration, solar &amp; civil engineering in Harare, Zimbabwe and Midrand, South Africa. Air conditioning, solar energy, electrical works, generators, CCTV &amp; home renovations. WhatsApp us today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <script src="./assets/vendor/gsap.min.js"></script>
+  <script src="./assets/vendor/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="bg-[#0A0D12] text-white overflow-x-hidden antialiased" style="font-family:'Inter',system-ui,sans-serif;">
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex justify-between items-center backdrop-blur-md bg-black/30 border-b border-white/5">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="./assets/images/Kansatech logo.png" alt="Kansatech" class="h-8 w-auto">
+    </a>
+    <nav class="hidden md:flex gap-8 text-xs text-white/70 tracking-widest uppercase">
+      <a href="#services" class="nav-item hover:text-[#D63031] transition-colors">Services</a>
+      <a href="#about" class="nav-item hover:text-[#D63031] transition-colors">About</a>
+      <a href="#work" class="nav-item hover:text-[#D63031] transition-colors">Work</a>
+      <a href="#contact" class="nav-item hover:text-[#D63031] transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20help%20with%20a%20service." class="nav-item text-xs font-medium tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp</a>
+      <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV DRAWER -->
+  <nav id="mobile-menu" aria-label="Mobile navigation">
+    <a href="#services" class="mobile-menu-link">Services</a>
+    <a href="#about" class="mobile-menu-link">About</a>
+    <a href="#work" class="mobile-menu-link">Work</a>
+    <a href="#contact" class="mobile-menu-link">Contact</a>
+    <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20help%20with%20a%20service." class="mobile-menu-wa">WhatsApp Us</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="top" class="relative w-screen min-h-screen overflow-hidden flex items-stretch justify-center">
+    <!-- Background layer -->
+    <div id="bg-container" class="absolute inset-0 w-full h-full z-0 pointer-events-none origin-center">
+      <div id="bg-layer" class="absolute inset-0 w-full h-full transform-gpu">
+        <div class="hero-slide hero-slide--architecture is-active absolute inset-0"></div>
+        <div class="hero-slide hero-slide--solar absolute inset-0"></div>
+        <div class="hero-slide hero-slide--engineering absolute inset-0"></div>
+        <div class="hero-slide hero-slide--electrical absolute inset-0"></div>
+      </div>
+      <!-- color grading (kept light so the photography reads) -->
+      <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(10,13,18,0.04) 0%, rgba(10,13,18,0.22) 50%, rgba(10,13,18,0.55) 100%);"></div>
+      <div class="absolute inset-0" style="background:radial-gradient(ellipse at 70% 30%, rgba(31,95,168,0.16), transparent 55%);"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_70%,rgba(214,48,49,0.13),transparent_50%)]"></div>
+      <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(10,13,18,0.04), rgba(10,13,18,0.2));"></div>
+      <!-- top gradient scrim so the top meta row is readable on brighter slides -->
+      <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(10,13,18,0.72) 0%, rgba(10,13,18,0.32) 18%, transparent 38%);"></div>
+      <!-- soft local scrim behind the left copy so it stays readable on brighter photos -->
+      <div class="absolute inset-0" style="background:radial-gradient(ellipse 46% 58% at 18% 52%, rgba(10,13,18,0.78) 0%, rgba(10,13,18,0.48) 52%, transparent 80%);"></div>
+      <!-- matching scrim under the big serif on the right -->
+      <div class="absolute inset-0" style="background:radial-gradient(ellipse 44% 40% at 74% 45%, rgba(10,13,18,0.46) 0%, rgba(10,13,18,0.18) 52%, transparent 80%);"></div>
+    </div>
+
+    <!-- Framed grid overlay -->
+    <div class="absolute inset-0 z-10 pointer-events-none p-4 md:p-8">
+      <div class="relative w-full h-full border border-white/10 frame-border">
+        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#D63031]/70 frame-corner"></div>
+        <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#D63031]/70 frame-corner"></div>
+        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#D63031]/70 frame-corner"></div>
+        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#D63031]/70 frame-corner"></div>
+        <div class="absolute left-1/4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/10 to-transparent frame-line"></div>
+        <div class="absolute right-1/4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/10 to-transparent frame-line"></div>
+        <div class="absolute top-1/2 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent frame-line-h"></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-20 w-full self-stretch px-6 md:px-12 flex flex-col justify-between pt-28 pb-10">
+      <!-- Top meta row -->
+      <div class="flex justify-between items-start text-xs tracking-widest">
+        <div class="text-[#D63031] font-mono hero-red-label">EST. HARARE, ZIMBABWE · MIDRAND, SOUTH AFRICA</div>
+        <div class="hidden md:block text-[#D63031] font-mono hero-red-label">ELECTRICAL · MECHANICAL · HVAC · CIVIL</div>
+      </div>
+
+      <!-- Middle: split typography -->
+      <div class="flex-1 relative mt-8 flex flex-col justify-center md:block">
+        <!-- Left detail -->
+        <div class="relative md:absolute mt-10 md:mt-0 top-0 md:top-[28%] left-0 md:left-[4%] max-w-md left-block">
+          <div class="text-[#D63031] text-xs mb-6 ml-10 font-mono hero-red-label">[01] THE PROMISE</div>
+          <div class="text-[#D63031] text-xl md:text-2xl tracking-tight mb-4 hero-red-label" style="font-family:'Playfair Display',serif;">Engineering that works.</div>
+          <p class="text-white/85 text-base md:text-lg leading-relaxed" style="font-family:'Inter',sans-serif; text-shadow:0 1px 12px rgba(10,13,18,0.75);">
+            From a single aircon unit to a full solar plant — we design, install and maintain the systems that keep your home and business running.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%27d%20like%20a%20quote." class="text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">Get a quote</a>
+            <a href="#services" class="text-xs font-semibold tracking-wide text-white border border-white/20 px-5 py-2.5 rounded-full hover:border-[#D63031] hover:text-[#D63031] transition-colors">Our services</a>
+          </div>
+        </div>
+
+        <!-- Right massive serif -->
+        <div class="relative md:absolute top-0 md:top-[8%] right-0 md:right-[2%] flex flex-col items-end text-right" style="color:#D63031; font-family:'Playfair Display',serif; text-shadow:0 3px 40px rgba(10,13,18,0.6);">
+          <div class="overflow-hidden p-1"><div class="text-[11vw] md:text-[6vw] leading-[0.85] tracking-tighter reveal-text">POWERING</div></div>
+          <div class="overflow-hidden p-1 mr-[14%] md:mr-[8%]"><div class="text-[7vw] md:text-[3.5vw] leading-[0.9] tracking-tight reveal-text italic">your</div></div>
+          <div class="overflow-hidden p-1"><div class="text-[13vw] md:text-[7.2vw] leading-[0.75] tracking-tighter reveal-text">ENVIRONMENT</div></div>
+        </div>
+      </div>
+
+      <!-- Scroll cue (mobile only) -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-white/40 font-mono tracking-widest scroll-cue md:hidden">SCROLL ↓</div>
+    </div>
+
+    <!-- Slide indicators (desktop) -->
+    <div id="hero-dots" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 hidden md:flex items-center gap-3">
+      <button class="hero-dot is-active" aria-label="Modern architecture"></button>
+      <button class="hero-dot" aria-label="Solar energy"></button>
+      <button class="hero-dot" aria-label="Engineering & blueprints"></button>
+      <button class="hero-dot" aria-label="Electrical works"></button>
+    </div>
+  </section>
+
+  <!-- SERVICES (broad, detailed) -->
+  <section id="services" class="bg-[#0A0D12] py-24 px-6 md:px-12 relative">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-xs font-mono text-[#D63031]/60 mb-4">[02] SERVICES</div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4" style="font-family:'Playfair Display',serif;">What we do.</h2>
+      <p class="text-white/60 max-w-2xl mb-16">Everything below is delivered in-house by our own technicians — no subcontractor surprises. Pick a service and message us on WhatsApp; we'll handle the rest.</p>
+
+      <div class="space-y-20">
+
+        <!-- Air Conditioning -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/arrival/WhatsApp%20Image%202026-11-14%20at%206.17.49%20PM.jpeg" alt="Air conditioning servicing and installation" class="absolute inset-0 w-full h-full object-cover" style="object-position:50% 25%;">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <div class="service-card-eyebrow font-mono">Comfort for Home &amp; Business</div>
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Air Conditioning</h3>
+            <p class="service-card-desc">Comprehensive airconditioning solutions for residential and commercial applications.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20air%20conditioning%20help." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about aircon</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Airconditioning supply</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> System design and selection</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> New installations</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Maintenance and servicing</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Repairs and fault finding</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Replacement of existing systems</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Domestic and commercial airconditioning</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Preventative maintenance</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Ongoing service and support</li>
+          </ul>
+        </div>
+
+        <!-- Commercial Air Conditioning -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/arrival/WhatsApp%20Image%202026-11-14%20at%206.17.48%20PM%20(1).jpeg" alt="Commercial VRF air conditioning units" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <div class="service-card-eyebrow font-mono">Dependable Climate Control</div>
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Commercial Air Conditioning</h3>
+            <p class="service-card-desc">Efficient commercial HVAC equipment and practical technical support tailored to your property.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20commercial%20air%20conditioning%20support." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about commercial HVAC</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Commercial installations</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Multi-unit systems</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Office and retail climate control</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Hospitality and lodge airconditioning</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Maintenance programmes and preventative servicing</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Fault finding and repairs</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Equipment replacement and upgrades</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> System assessments and technical support</li>
+          </ul>
+        </div>
+
+        <!-- Commercial Refrigeration -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/arrival/WhatsApp%20Image%202026-11-14%20at%206.48.11%20PM%20(2).jpeg" alt="Commercial walk-in cold room refrigeration" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <div class="service-card-eyebrow font-mono">Refrigeration Service &amp; Support</div>
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Commercial Refrigeration</h3>
+            <p class="service-card-desc">Refrigeration solutions and technical support for commercial and domestic refrigeration applications.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20commercial%20refrigeration%20help." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about refrigeration</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Equipment supply</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Installation</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Servicing</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Repairs</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Fault finding</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Preventative maintenance</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Commercial refrigeration support</li>
+          </ul>
+        </div>
+
+        <!-- Solar -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/Solar/IMG-20240313-WA0046.jpg" alt="Solar panel installation" class="absolute inset-0 w-full h-full object-cover" style="object-position:50% 15%;">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Solar Energy</h3>
+            <p class="service-card-desc">Lower your bills and keep the lights on with solar systems designed around your actual usage.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20a%20solar%20system." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about solar</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Site assessment & custom system design (residential, commercial, industrial)</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Grid-tied, hybrid & off-grid solar installations</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Panels, inverters, batteries (lithium & gel) & mounting structures</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Upgrades to existing systems to boost output</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Troubleshooting & repairs (panels, inverters, batteries, wiring)</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Maintenance contracts & performance monitoring</li>
+          </ul>
+        </div>
+
+        <!-- Electrical -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/services/electrical.jpg" alt="Electrical works" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Electrical Works</h3>
+            <p class="service-card-desc">Safe, code-compliant electrical work — from DB boards to full rewires and generators.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20electrical%20work." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about electrical</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Diesel generator sizing, supply & installation</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Automatic transfer switches (ATS) & manual changeover</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Generator servicing, oil/filter changes & load testing</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> House & building wiring, DB boards, earth leakage</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Electrical safety inspections & compliance certificates</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Troubleshooting: overloads, short circuits, faulty wiring</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Energy-efficient lighting (LED) & smart home automation</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Electrical upgrades for safety & convenience</li>
+          </ul>
+        </div>
+
+        <!-- CCTV & Security -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/services/cctv.jpg" alt="CCTV camera installation" class="absolute inset-0 w-full h-full object-cover" style="object-position:52% 50%;">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">CCTV & Security</h3>
+            <p class="service-card-desc">Camera systems, access control and IT security specified, installed and maintained by one team.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20CCTV%20or%20IT%20security." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about CCTV & IT</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> CCTV camera systems (IP & analogue), DVR/NVR setup</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Remote viewing on phone, motion alerts & night vision</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Access control, electric fencing & alarm integration</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> IT: networking, software, hardware maintenance & digital security</li>
+          </ul>
+        </div>
+
+        <!-- Home Renovations -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/services/renovations.jpg" alt="Home renovations and interior finishing" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Home Renovations</h3>
+            <p class="service-card-desc">Complete interior and exterior upgrades — cabinetry, tiling, partitioning, glasswork and finishing.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20home%20renovation%20services." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about renovations</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Full home renovations &amp; interior upgrades</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Kitchen cupboards &amp; fitted built-in cabinetry</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Floor &amp; wall tiling</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Drywalling &amp; room partitioning</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Professional painting &amp; finishing</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Aluminium &amp; glass installations</li>
+          </ul>
+        </div>
+
+        <!-- Civil & Mechanical Works -->
+        <div class="grid md:grid-cols-2 gap-10 items-start border-t border-white/10 pt-12">
+          <div class="service-card relative rounded-2xl overflow-hidden border border-white/10 min-h-[340px] flex flex-col justify-end">
+            <img src="./assets/images/services/civil.jpg" alt="Civil and mechanical works" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(10,13,18,0.97) 0%, rgba(10,13,18,0.88) 32%, rgba(10,13,18,0.35) 48%, rgba(10,13,18,0) 56%);"></div>
+            <div class="service-card-body">
+            <h3 class="service-card-title" style="font-family:'Playfair Display',serif;">Civil &amp; Mechanical Works</h3>
+            <p class="service-card-desc">Mechanical engineering, diesel motor maintenance and civil construction works under one roof.</p>
+            <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%20need%20civil%20or%20mechanical%20services." class="service-card-cta inline-block text-xs font-semibold tracking-wide text-[#0A0D12] bg-[#D63031] px-5 py-2.5 rounded-full hover:bg-[#E84545] transition-colors">WhatsApp about civil &amp; mechanical</a>
+            </div>
+          </div>
+          <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Mechanical engineering &amp; diesel motor maintenance</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Civil &amp; structural construction works</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Frameless glass &amp; architectural aluminium works</li>
+            <li class="flex gap-3"><span class="text-[#D63031]">▸</span> Commercial fit-outs &amp; facility maintenance</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-[#0F141B] py-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <div>
+        <div class="text-xs font-mono text-[#D63031]/60 mb-4">[03] ABOUT</div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6" style="font-family:'Playfair Display',serif;">Built on craft,<br>driven by service.</h2>
+        <p class="text-white/70 leading-relaxed mb-6">Kansatech (Pvt) Ltd is an independent electrical, mechanical, refrigeration &amp; air conditioning (HVAC) company operating across Harare, Zimbabwe (Main Branch) and Midrand, South Africa (South Africa Branch). We are committed to delivering excellence across every project — from a single service call to a major construction contract.</p>
+        <p class="text-white/70 leading-relaxed">Our mission: provide satisfactory services, build long-term client relationships through high-quality work and support, and grow sustainably while creating jobs and boosting the economy.</p>
+      </div>
+      <div class="space-y-6">
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-xs font-mono mb-2">VALUES</div>
+          <div class="text-lg font-semibold">Compassion · Integrity · Honesty · Professionalism</div>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-xs font-mono mb-2">COLLABORATION</div>
+          <div class="text-white/70 text-sm leading-relaxed">Through our partnership with Aspired Connect, Kansatech also delivers full electrical, HVAC and air conditioning solutions — including solar, generators and CCTV — proving our capability goes far beyond mechanical work.</div>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-xs font-mono mb-2">BRANCHES</div>
+          <div class="text-white/70 text-sm space-y-1">
+            <div><span class="text-white font-medium">Main Branch (Harare, Zimbabwe):</span> 1432 7th Close, Crowborough North, Harare, Zimbabwe</div>
+            <div><span class="text-white font-medium">South Africa Branch:</span> 4228 Ghost Fisher Cres, Allandale, Midrand, South Africa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-[#0A0D12] py-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-xs font-mono text-[#D63031]/60 mb-4">[04] PROCESS</div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-12" style="font-family:'Playfair Display',serif;">From message to installed.</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-5xl font-bold mb-3" style="font-family:'Playfair Display',serif;">01</div>
+          <div class="font-semibold mb-1">Message us</div>
+          <div class="text-sm text-white/60">WhatsApp with what you need.</div>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-5xl font-bold mb-3" style="font-family:'Playfair Display',serif;">02</div>
+          <div class="font-semibold mb-1">Site visit</div>
+          <div class="text-sm text-white/60">We assess on location, free.</div>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-5xl font-bold mb-3" style="font-family:'Playfair Display',serif;">03</div>
+          <div class="font-semibold mb-1">Quote</div>
+          <div class="text-sm text-white/60">Clear price, no surprises.</div>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-6">
+          <div class="text-[#D63031] text-5xl font-bold mb-3" style="font-family:'Playfair Display',serif;">04</div>
+          <div class="font-semibold mb-1">Install</div>
+          <div class="text-sm text-white/60">Done properly, on time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="work" class="bg-[#0F141B] py-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-xs font-mono text-[#D63031]/60 mb-4">[05] WORK DONE</div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4" style="font-family:'Playfair Display',serif;">Real jobs. Real results.</h2>
+      <p class="text-white/60 max-w-2xl mb-12">A sample of projects delivered. Your phone photos are welcome — we'll grade them into a consistent, professional look.</p>
+      <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[180px]"></div>
+      <p class="text-white/40 text-sm mt-8">Tap any photo for a full-screen view.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-[#0A0D12] py-24 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-xs font-mono text-[#D63031]/60 mb-4">[06] CONTACT</div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-12" style="font-family:'Playfair Display',serif;">Let's talk.</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%27d%20like%20to%20enquire." class="block border border-[#25D366] rounded-2xl p-6 hover:bg-[#25D366]/10 transition">
+            <div class="text-[#25D366] font-semibold text-lg">WhatsApp (preferred)</div>
+            <div class="text-white/60 text-sm mt-1">+263 78 856 6195 · tap to chat</div>
+          </a>
+          <a href="tel:+263715779930" class="block border border-white/10 rounded-2xl p-6 hover:border-[#D63031]/50 transition">
+            <div class="font-semibold text-lg">Phone</div>
+            <div class="text-white/60 text-sm mt-1">+263 71 577 9930 · tap to call</div>
+          </a>
+          <a href="mailto:kansatech@aol.com" class="block border border-white/10 rounded-2xl p-6 hover:border-[#D63031]/50 transition">
+            <div class="font-semibold text-lg">Email</div>
+            <div class="text-white/60 text-sm mt-1">kansatech@aol.com · tap to email</div>
+          </a>
+          <div class="border border-white/10 rounded-2xl p-6">
+            <div class="font-semibold text-lg">Branches</div>
+            <div class="text-white/60 text-sm mt-1 space-y-1">
+              <div><span class="text-white/90 font-medium">Main Branch:</span> 1432 7th Close, Crowborough North, Harare, Zimbabwe</div>
+              <div><span class="text-white/90 font-medium">South Africa Branch:</span> 4228 Ghost Fisher Cres, Allandale, Midrand, South Africa</div>
+            </div>
+          </div>
+        </div>
+        <div class="border border-white/10 rounded-2xl overflow-hidden min-h-[240px]">
+          <iframe
+            src="https://www.google.com/maps?q=1432%207th%20Close%2C%20Crowborough%20North%2C%20Harare%2C%20Zimbabwe&output=embed"
+            width="100%" height="100%" style="border:0; min-height:340px; filter:grayscale(0.4) contrast(1.05);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Kansatech location — 1432 7th Close, Crowborough North, Harare">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0A0D12] border-t border-white/10 py-12 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm text-white/60">
+      <div>
+        <div class="mb-2"><img src="./assets/images/Kansatech logo.png" alt="Kansatech" class="h-10 w-auto"></div>
+        <div>Harare (Main): 1432 7th Close, Crowborough North, Harare, Zimbabwe</div>
+        <div>South Africa: 4228 Ghost Fisher Cres, Allandale, Midrand, South Africa</div>
+        <div class="mt-1">WhatsApp: <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%27d%20like%20to%20enquire." class="footer-red-link">+263 78 856 6195</a> · Phone: <a href="tel:+263715779930" class="footer-red-link">+263 71 577 9930</a> · <a href="mailto:kansatech@aol.com" class="footer-red-link">kansatech@aol.com</a></div>
+      </div>
+      <div class="flex gap-6">
+        <a href="#services" class="hover:text-[#D63031]">Services</a>
+        <a href="#about" class="hover:text-[#D63031]">About</a>
+        <a href="#work" class="hover:text-[#D63031]">Work</a>
+        <a href="#contact" class="hover:text-[#D63031]">Contact</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-8 text-xs text-white/30">© Kansatech (Pvt) Ltd. All rights reserved.</div>
+  </footer>
+
+  <!-- Sticky WhatsApp -->
+  <a href="https://wa.me/263788566195?text=Hi%20Kansatech%2C%20I%27d%20like%20to%20enquire." class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/95 p-4 md:p-10">
+    <button id="lb-close" class="absolute top-5 right-5 text-white/80 hover:text-white text-4xl leading-none">&times;</button>
+    <div class="max-w-5xl w-full">
+      <img id="lb-img" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-lg">
+      <div class="mt-4">
+        <h3 id="lb-title" class="text-2xl md:text-3xl font-bold" style="font-family:'Playfair Display',serif;"></h3>
+        <p id="lb-desc" class="text-white/60 text-sm md:text-base mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
